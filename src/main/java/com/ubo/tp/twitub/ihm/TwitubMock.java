@@ -1,4 +1,4 @@
-package main.java.com.ubo.tp.twitub.ihm;
+package com.ubo.tp.twitub.ihm;
 
 import java.awt.Button;
 import java.awt.Dimension;
@@ -16,10 +16,10 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingUtilities;
 
-import main.java.com.ubo.tp.twitub.core.EntityManager;
-import main.java.com.ubo.tp.twitub.datamodel.IDatabase;
-import main.java.com.ubo.tp.twitub.datamodel.Twit;
-import main.java.com.ubo.tp.twitub.datamodel.User;
+import com.ubo.tp.twitub.core.EntityManager;
+import com.ubo.tp.twitub.datamodel.IDatabase;
+import com.ubo.tp.twitub.datamodel.Twit;
+import com.ubo.tp.twitub.datamodel.User;
 
 public class TwitubMock {
 
@@ -179,7 +179,7 @@ public class TwitubMock {
 	protected User generateUser() {
 		int randomInt = new Random().nextInt(99999);
 		String userName = "MockUser" + randomInt;
-		User newUser = new User(UUID.randomUUID(), userName, "--", userName, new HashSet<>(), "");
+		User newUser = new User(UUID.randomUUID(), userName, "--", userName, new HashSet<String>(), "");
 
 		return newUser;
 	}

@@ -1,10 +1,10 @@
-package main.java.com.ubo.tp.twitub.controller;
+package com.ubo.tp.twitub.controller;
 
-import main.java.com.ubo.tp.twitub.datamodel.IDatabase;
-import main.java.com.ubo.tp.twitub.datamodel.Twit;
-import main.java.com.ubo.tp.twitub.datamodel.User;
-import main.java.com.ubo.tp.twitub.ihm.AuthenticationView;
-import main.java.com.ubo.tp.twitub.ihm.TwitsView;
+import com.ubo.tp.twitub.datamodel.IDatabase;
+import com.ubo.tp.twitub.datamodel.Twit;
+import com.ubo.tp.twitub.datamodel.User;
+import com.ubo.tp.twitub.ihm.TwitsView;
+import com.ubo.tp.twitub.controller.ILoginObserver;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -21,7 +21,7 @@ public class TwitsController {
         this.view = view;
         this.db = db;
         this.user = user;
-        this.observers = new HashSet<>();
+        this.observers = new HashSet<ILoginObserver>();
         this.twits = new HashSet<>();
     }
 

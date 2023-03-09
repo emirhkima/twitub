@@ -1,4 +1,4 @@
-package main.java.com.ubo.tp.twitub.common;
+package com.ubo.tp.twitub.common;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -15,7 +15,7 @@ public class FilesUtils {
 	/**
 	 * Déplacement du fichier source vers le fichier destination.
 	 * 
-	 * @param sourceFileName
+	 * @param sourceFile
 	 *            , Chemin du fichier source
 	 * @param destFileName
 	 *            , Chemin du fichier de destination

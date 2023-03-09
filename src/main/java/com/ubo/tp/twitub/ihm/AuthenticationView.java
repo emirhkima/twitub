@@ -1,6 +1,6 @@
-package main.java.com.ubo.tp.twitub.ihm;
+package com.ubo.tp.twitub.ihm;
 
-import main.java.com.ubo.tp.twitub.datamodel.User;
+import com.ubo.tp.twitub.datamodel.User;
 
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
@@ -56,7 +56,7 @@ public class AuthenticationView extends JFrame implements ActionListener {
     }
 
     public User getUser() {
-        User newUser = new User(UUID.randomUUID(), txtUsername.getText(), txtPassword.getText(), txtUsername.getText(), new HashSet<>(), "");
+        User newUser = new User(UUID.randomUUID(), txtUsername.getText(), txtPassword.getText(), txtUsername.getText(), new HashSet<String>(), "");
 
         return newUser;
     }

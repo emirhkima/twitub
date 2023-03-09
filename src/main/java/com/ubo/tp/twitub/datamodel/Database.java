@@ -1,10 +1,11 @@
-package main.java.com.ubo.tp.twitub.datamodel;
+package com.ubo.tp.twitub.datamodel;
 
 import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
+import com.ubo.tp.twitub.datamodel.Twit;
 
-import main.java.com.ubo.tp.twitub.common.Constants;
+import com.ubo.tp.twitub.common.Constants;
 
 /**
  * Classe représentant les donénes chargées dans l'application.
@@ -32,11 +33,18 @@ public class Database implements IDatabase {
 	 */
 	public Database() {
 		mUsers = new HashSet<>();
-		mTwits = new HashSet<>();
-		User user = new User(UUID.randomUUID(), "admin", "admin", "admin", new HashSet<>(), "");
-		mUsers.add(user);
-		mTwits.add(new Twit(user, "First Twit"));
-		mTwits.add(new Twit(user, "Second Twit"));
+		mTwits = new HashSet<Twit>();
+		User neil = new User(UUID.randomUUID(), "neil", "admin", "Neil", new HashSet<>(), "src/main/resources/images/logo_50.jpg");
+		User buzz = new User(UUID.randomUUID(), "buzz", "admin", "Buzz", new HashSet<>(), "src/main/resources/images/logo_50.jpg");
+		mUsers.add(neil);
+		mUsers.add(buzz);
+
+		mTwits.add(new Twit(neil, "That's one small step for man."));
+		mTwits.add(new Twit(neil, "One giant leap for mankind."));
+		mTwits.add(new Twit(buzz, "Beautiful view."));
+		mTwits.add(new Twit(neil, "Isn't that something? Magnificent sight out here."));
+		mTwits.add(new Twit(buzz, "Magnificent desolation."));
+
 		mObservers = new HashSet<>();
 	}
 

@@ -1,8 +1,8 @@
-package main.java.com.ubo.tp.twitub.listener;
+package com.ubo.tp.twitub.listener;
 
-import main.java.com.ubo.tp.twitub.controller.LoginController;
-import main.java.com.ubo.tp.twitub.core.Twitub;
-import main.java.com.ubo.tp.twitub.ihm.AuthenticationView;
+import com.ubo.tp.twitub.controller.LoginController;
+import com.ubo.tp.twitub.core.Twitub;
+import com.ubo.tp.twitub.ihm.AuthenticationView;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

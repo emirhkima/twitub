@@ -1,6 +1,8 @@
-package main.java.com.ubo.tp.twitub.datamodel;
+package com.ubo.tp.twitub.datamodel;
 
 import java.util.Set;
+import com.ubo.tp.twitub.datamodel.User;
+import com.ubo.tp.twitub.datamodel.Twit;
 
 /**
  * Interface de la base de données de l'application.

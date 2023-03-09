@@ -5,12 +5,13 @@
 // Generated on: 2015.02.22 at 01:32:54 PM CET 
 //
 
-package main.java.com.ubo.tp.twitub.datamodel.jaxb.bean.user;
+package com.ubo.tp.twitub.datamodel.jaxb.bean.user;
 
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlElementDecl;
 import javax.xml.bind.annotation.XmlRegistry;
 import javax.xml.namespace.QName;
+import com.ubo.tp.twitub.datamodel.jaxb.bean.user.UserXml;
 
 /**
  * This object contains factory methods for each Java content interface and Java

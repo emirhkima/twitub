@@ -1,8 +1,9 @@
-package main.java.com.ubo.tp.twitub.controller;
+package com.ubo.tp.twitub.controller;
 
-import main.java.com.ubo.tp.twitub.core.Twitub;
-import main.java.com.ubo.tp.twitub.datamodel.*;
-import main.java.com.ubo.tp.twitub.ihm.AuthenticationView;
+import com.ubo.tp.twitub.core.Twitub;
+import com.ubo.tp.twitub.datamodel.*;
+import com.ubo.tp.twitub.ihm.AuthenticationView;
+import com.ubo.tp.twitub.controller.ILoginObserver;
 
 import java.util.HashSet;
 import java.util.Set;

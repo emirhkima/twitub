@@ -1,18 +1,21 @@
-package main.java.com.ubo.tp.twitub.core;
+package com.ubo.tp.twitub.core;
 
 import java.io.File;
 
-import main.java.com.ubo.tp.twitub.controller.ILoginObserver;
-import main.java.com.ubo.tp.twitub.controller.LoginController;
-import main.java.com.ubo.tp.twitub.controller.TwitsController;
-import main.java.com.ubo.tp.twitub.ihm.TwitsView;
-import main.java.com.ubo.tp.twitub.listener.LoginListener;
-import main.java.com.ubo.tp.twitub.datamodel.*;
-import main.java.com.ubo.tp.twitub.events.file.IWatchableDirectory;
-import main.java.com.ubo.tp.twitub.events.file.WatchableDirectory;
-import main.java.com.ubo.tp.twitub.ihm.AuthenticationView;
-import main.java.com.ubo.tp.twitub.ihm.DirectoryPicker;
-import main.java.com.ubo.tp.twitub.ihm.TwitubMock;
+import com.ubo.tp.twitub.datamodel.Database;
+import com.ubo.tp.twitub.controller.ILoginObserver;
+import com.ubo.tp.twitub.controller.LoginController;
+import com.ubo.tp.twitub.controller.TwitsController;
+import com.ubo.tp.twitub.ihm.TwitsView;
+import com.ubo.tp.twitub.listener.LoginListener;
+import com.ubo.tp.twitub.datamodel.*;
+import com.ubo.tp.twitub.events.file.IWatchableDirectory;
+import com.ubo.tp.twitub.events.file.WatchableDirectory;
+import com.ubo.tp.twitub.ihm.AuthenticationView;
+import com.ubo.tp.twitub.ihm.DirectoryPicker;
+import com.ubo.tp.twitub.ihm.TwitubMock;
+import com.ubo.tp.twitub.core.EntityManager;
+import com.ubo.tp.twitub.datamodel.DatabaseObserver;
 
 /**
  * Classe principale l'application.
@@ -116,7 +119,7 @@ public class Twitub implements ILoginObserver {
 
 		try {
 			System.out.println(this.mDatabase.getUserTwits(user).size());
-			TwitsView frame = new TwitsView(this.mDatabase.getUserTwits(this.user));
+			TwitsView frame = new TwitsView(this.mDatabase.getTwits());
 			TwitsController controller = new TwitsController(frame, this.mDatabase, this.user);
 
 			controller.addObserver(this);
